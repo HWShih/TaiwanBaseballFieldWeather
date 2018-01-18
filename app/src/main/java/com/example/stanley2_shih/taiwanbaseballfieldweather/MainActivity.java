@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_webview);
         WebView webView = findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
+        webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setLoadWithOverviewMode(true);
         //The default web browser opens and loads the destination URL.
         webView.setWebViewClient(new MyWebViewClient());
         webView.loadUrl("http://www.cwb.gov.tw/V7/forecast/entertainment/other/K001.htm");
